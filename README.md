@@ -8,4 +8,4 @@
 名前は適当
 
 ## 何使う？
-[React.js](https://ja.reactjs.org) と [react-vis](https://github.com/uber/react-vis) でなんとかしたい
+[React.js](https://ja.reactjs.org) と ~~[react-vis](https://github.com/uber/react-vis)~~ でなんとかしたい
