@@ -1,27 +1,69 @@
 import React from 'react';
-import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis, Tooltip, Dot, ZAxis } from 'recharts';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 
 import races from './assets/race.json';
 import Race from './components/Race';
 
-const Races = (props) => {
-  const { race, x, y, cx, cy } = props;
+const GRADE = {
+  NAME: {
+    G3: 'GⅢ',
+    G2: 'GⅡ',
+    G1: 'GⅠ',
+  },
+  COLOR: {
+    G3: '#268300',
+    G2: '#D71A1A',
+    G1: '#1976D2',
+  },
+};
+
+const RaceToolTip = ({ active, payload }) => {
+  if (active) {
+    const race = payload[2].value;
+    return <Race {...race} />;
+  }
+
+  return null;
+};
+
+RaceToolTip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+};
+
+const RaceDot = (props) => {
+  const { cx, cy, race } = props;
+
+  const enumGradeColor = (gradeString) => {
+    for (const [k, v] of Object.entries(GRADE.NAME)) {
+      if (new RegExp(v).test(gradeString)) {
+        return GRADE.COLOR[k];
+      }
+    }
+    return '#989996';
+  };
+
+  const fill = enumGradeColor(race.grade);
+
   return (
-    <foreignObject x={x} y={y} width="200" height="200">
-      <div dangerouslySetInnerHTML={{ __html: `<!-- ${cx} ${cy} -->` }} />
-      <Race {...race} />
-    </foreignObject>
+    <g>
+      <Dot cx={cx} cy={cy} r={5} fill={fill} />
+      <g transform={`translate(${cx},${cy})`}>
+        <text x={10} y={0} dy={4} textAnchor="left">
+          {race.name}
+        </text>
+      </g>
+    </g>
   );
 };
 
-Races.propTypes = {
+RaceDot.propTypes = {
   race: PropTypes.object,
-  x: PropTypes.number,
-  y: PropTypes.number,
   cx: PropTypes.number,
   cy: PropTypes.number,
+  fill: PropTypes.string,
 };
 
 const Graph = () => {
@@ -41,9 +83,17 @@ const Graph = () => {
   const ymax = dayjs('2021/12/31').unix();
 
   return (
-    <ScatterChart width={1200} height={24200} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
+    <ScatterChart width={1200} height={2400} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="distance" domain={['dataMin', 'dataMax']} type="number" name="距離" unit="m" orientation="top" />
+      <XAxis
+        dataKey="distance"
+        domain={['dataMin', 'dataMax']}
+        type="number"
+        name="距離"
+        unit="m"
+        orientation="top"
+        interval={0}
+      />
       <YAxis
         dataKey="date"
         domain={[ymin, ymax]}
@@ -53,7 +103,9 @@ const Graph = () => {
         tickFormatter={formatUtToDate}
         tickCount={25}
       />
-      <Scatter name="race" data={scat} legendType="none" shape={<Races />} />
+      <ZAxis dataKey="race" />
+      <Tooltip content={<RaceToolTip />} />
+      <Scatter name="race" data={scat} legendType="none" shape={<RaceDot />} />
     </ScatterChart>
   );
 };
