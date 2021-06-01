@@ -1,45 +1,59 @@
 import React from 'react';
-import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis } from 'recharts';
 import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
 
-const CustomElement = (props) => {
-  console.log({ ...props });
-  const { xx, x, y, width, height } = props;
-  console.log({ xx });
+import races from './assets/race.json';
+import Race from './components/Race';
+
+const Races = (props) => {
+  const { race, x, y, cx, cy } = props;
   return (
-    <foreignObject x={x} y={y} width={width + 100} height={height + 100}>
-      <div className="box">sample: {xx}</div>
+    <foreignObject x={x} y={y} width="200" height="200">
+      <div dangerouslySetInnerHTML={{ __html: `<!-- ${cx} ${cy} -->` }} />
+      <Race {...race} />
     </foreignObject>
   );
 };
 
-CustomElement.propTypes = {
+Races.propTypes = {
+  race: PropTypes.object,
   x: PropTypes.number,
   y: PropTypes.number,
-  xx: PropTypes.number,
-  width: PropTypes.number,
-  height: PropTypes.number,
+  cx: PropTypes.number,
+  cy: PropTypes.number,
 };
 
 const Graph = () => {
-  const scat = [
-    { x: 100, y: 200, z: 200, xx: 1230 },
-    { x: 120, y: 100, z: 260, xx: 1230 },
-    { x: 170, y: 300, z: 400, xx: 1230 },
-    { x: 140, y: 250, z: 280, xx: 1230 },
-    { x: 150, y: 400, z: 500, xx: 1230 },
-    { x: 110, y: 280, z: 200, xx: 1230 },
-  ];
+  const scat = races.map((race) => {
+    const distance = race.course.distance;
+    const date = dayjs(race.date).unix();
+    return { distance, date, race };
+  });
 
   console.log(scat);
 
+  const formatUtToDate = (tickItem) => {
+    return dayjs.unix(tickItem).format('MM/DD');
+  };
+
+  const ymin = dayjs('2021/01/01').unix();
+  const ymax = dayjs('2021/12/31').unix();
+
   return (
-    <ScatterChart width={400} height={400} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
+    <ScatterChart width={1200} height={24200} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis type="number" dataKey="x" name="stature" unit="cm" />
-      <YAxis type="number" dataKey="y" name="weight" unit="kg" />
-      <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-      <Scatter name="A school" data={scat} fill="#8884d8" shape={<CustomElement />} />
+      <XAxis dataKey="distance" domain={['dataMin', 'dataMax']} type="number" name="距離" unit="m" orientation="top" />
+      <YAxis
+        dataKey="date"
+        domain={[ymin, ymax]}
+        type="number"
+        name="日付"
+        reversed
+        tickFormatter={formatUtToDate}
+        tickCount={25}
+      />
+      <Scatter name="race" data={scat} legendType="none" shape={<Races />} />
     </ScatterChart>
   );
 };

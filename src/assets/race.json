@@ -4,7 +4,7 @@
         "grade": "GⅢ",
         "name": "中山金杯",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -19,7 +19,7 @@
         "grade": "GⅢ",
         "name": "京都金杯",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -34,7 +34,7 @@
         "grade": "GⅢ",
         "name": "シンザン記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -49,7 +49,7 @@
         "grade": "GⅢ",
         "name": "フェアリーS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -64,7 +64,7 @@
         "grade": "GⅢ",
         "name": "愛知杯",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": true,
@@ -79,7 +79,7 @@
         "grade": "GⅢ",
         "name": "京成杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -94,7 +94,7 @@
         "grade": "GⅡ",
         "name": "日経新春杯",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -109,7 +109,7 @@
         "grade": "GⅡ",
         "name": "アメリカJCC",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -124,7 +124,7 @@
         "grade": "GⅡ",
         "name": "東海S",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -139,7 +139,7 @@
         "grade": "GⅢ",
         "name": "根岸S",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -154,7 +154,7 @@
         "grade": "GⅢ",
         "name": "シルクロードS",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -169,7 +169,7 @@
         "grade": "GⅢ",
         "name": "東京新聞杯",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -184,7 +184,7 @@
         "grade": "GⅢ",
         "name": "きさらぎ賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -199,7 +199,7 @@
         "grade": "GⅢ",
         "name": "クイーンC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -214,7 +214,7 @@
         "grade": "GⅢ",
         "name": "共同通信杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -229,7 +229,7 @@
         "grade": "GⅡ",
         "name": "京都記念",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -244,7 +244,7 @@
         "grade": "GⅢ",
         "name": "ダイヤモンドS",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -259,7 +259,7 @@
         "grade": "GⅢ",
         "name": "京都牝馬S",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": true,
@@ -274,7 +274,7 @@
         "grade": "GⅠ",
         "name": "フェブラリーS",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -289,7 +289,7 @@
         "grade": "GⅢ",
         "name": "小倉大賞典",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -304,7 +304,7 @@
         "grade": "GⅡ",
         "name": "中山記念",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -319,7 +319,7 @@
         "grade": "GⅢ",
         "name": "阪急杯",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -334,7 +334,7 @@
         "grade": "GⅢ",
         "name": "オーシャンS",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -349,7 +349,7 @@
         "grade": "GⅡ",
         "name": "チューリップ賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -364,7 +364,7 @@
         "grade": "GⅡ",
         "name": "弥生賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -379,7 +379,7 @@
         "grade": "GⅢ",
         "name": "中山牝馬S",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": true,
@@ -394,7 +394,7 @@
         "grade": "J・GⅡ",
         "name": "阪神スプリングジャンプ",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -409,7 +409,7 @@
         "grade": "GⅡ",
         "name": "フィリーズレビュー",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -424,7 +424,7 @@
         "grade": "GⅡ",
         "name": "金鯱賞",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -439,7 +439,7 @@
         "grade": "GⅢ",
         "name": "フラワーC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -454,7 +454,7 @@
         "grade": "GⅢ",
         "name": "ファルコンS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -469,7 +469,7 @@
         "grade": "GⅡ",
         "name": "スプリングS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -484,7 +484,7 @@
         "grade": "GⅡ",
         "name": "阪神大賞典",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -499,7 +499,7 @@
         "grade": "GⅡ",
         "name": "日経賞",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -514,7 +514,7 @@
         "grade": "GⅢ",
         "name": "毎日杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -529,7 +529,7 @@
         "grade": "GⅢ",
         "name": "マーチS",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -544,7 +544,7 @@
         "grade": "GⅠ",
         "name": "高松宮記念",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -559,7 +559,7 @@
         "grade": "GⅢ",
         "name": "ダービー卿チャレンジT",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -574,7 +574,7 @@
         "grade": "GⅠ",
         "name": "大阪杯",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -589,7 +589,7 @@
         "grade": "GⅡ",
         "name": "ニュージーランドT",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -604,7 +604,7 @@
         "grade": "GⅡ",
         "name": "阪神牝馬S",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": true,
@@ -619,7 +619,7 @@
         "grade": "GⅠ",
         "name": "桜花賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -634,7 +634,7 @@
         "grade": "J・GⅠ",
         "name": "中山グランドジャンプ",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -649,7 +649,7 @@
         "grade": "GⅢ",
         "name": "アーリントンC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -664,7 +664,7 @@
         "grade": "GⅠ",
         "name": "皐月賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -679,7 +679,7 @@
         "grade": "GⅢ",
         "name": "アンタレスS",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -694,7 +694,7 @@
         "grade": "GⅢ",
         "name": "福島牝馬S",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": true,
@@ -709,7 +709,7 @@
         "grade": "GⅡ",
         "name": "フローラS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -724,7 +724,7 @@
         "grade": "GⅡ",
         "name": "マイラーズC",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -739,7 +739,7 @@
         "grade": "GⅡ",
         "name": "青葉賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -754,7 +754,7 @@
         "grade": "GⅠ",
         "name": "天皇賞（春）",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -769,7 +769,7 @@
         "grade": "GⅡ",
         "name": "京都新聞杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -784,7 +784,7 @@
         "grade": "GⅠ",
         "name": "NHKマイルC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -799,7 +799,7 @@
         "grade": "GⅢ",
         "name": "新潟大賞典",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -814,7 +814,7 @@
         "grade": "GⅡ",
         "name": "京王杯スプリングC",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -829,7 +829,7 @@
         "grade": "J・GⅡ",
         "name": "京都ハイジャンプ",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -844,7 +844,7 @@
         "grade": "GⅠ",
         "name": "ヴィクトリアマイル",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": true,
@@ -859,7 +859,7 @@
         "grade": "GⅢ",
         "name": "平安S",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -874,7 +874,7 @@
         "grade": "GⅠ",
         "name": "オークス",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -889,7 +889,7 @@
         "grade": "重賞",
         "name": "葵S",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -904,7 +904,7 @@
         "grade": "GⅠ",
         "name": "日本ダービー",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -919,7 +919,7 @@
         "grade": "GⅡ",
         "name": "目黒記念",
         "age": {
-            "age": "4",
+            "age": 4,
             "more": true
         },
         "femaleOnly": false,
@@ -934,7 +934,7 @@
         "grade": "GⅢ",
         "name": "鳴尾記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -949,7 +949,7 @@
         "grade": "GⅠ",
         "name": "安田記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -964,7 +964,7 @@
         "grade": "GⅢ",
         "name": "エプソムC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -979,7 +979,7 @@
         "grade": "GⅢ",
         "name": "函館スプリントS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -994,7 +994,7 @@
         "grade": "GⅢ",
         "name": "ユニコーンS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -1009,7 +1009,7 @@
         "grade": "GⅢ",
         "name": "マーメイドS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": true,
@@ -1024,7 +1024,7 @@
         "grade": "J・GⅢ",
         "name": "東京ジャンプS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1039,7 +1039,7 @@
         "grade": "GⅠ",
         "name": "宝塚記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1054,7 +1054,7 @@
         "grade": "GⅢ",
         "name": "ラジオNIKKEI賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -1069,7 +1069,7 @@
         "grade": "GⅢ",
         "name": "CBC賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1084,7 +1084,7 @@
         "grade": "GⅢ",
         "name": "七夕賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1099,7 +1099,7 @@
         "grade": "GⅢ",
         "name": "プロキオンS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1114,7 +1114,7 @@
         "grade": "GⅢ",
         "name": "函館2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1129,7 +1129,7 @@
         "grade": "GⅢ",
         "name": "中京記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1144,7 +1144,7 @@
         "grade": "GⅢ",
         "name": "函館記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1159,7 +1159,7 @@
         "grade": "GⅢ",
         "name": "アイビスサマーダッシュ",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1174,7 +1174,7 @@
         "grade": "J・GⅢ",
         "name": "新潟ジャンプS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1189,7 +1189,7 @@
         "grade": "GⅢ",
         "name": "クイーンS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": true,
@@ -1204,7 +1204,7 @@
         "grade": "GⅢ",
         "name": "レパードS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -1219,7 +1219,7 @@
         "grade": "GⅢ",
         "name": "エルムS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1234,7 +1234,7 @@
         "grade": "GⅢ",
         "name": "関屋記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1249,7 +1249,7 @@
         "grade": "GⅢ",
         "name": "小倉記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1264,7 +1264,7 @@
         "grade": "GⅢ",
         "name": "北九州記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1279,7 +1279,7 @@
         "grade": "GⅡ",
         "name": "札幌記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1294,7 +1294,7 @@
         "grade": "J・GⅢ",
         "name": "小倉サマージャンプ",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1309,7 +1309,7 @@
         "grade": "GⅢ",
         "name": "新潟2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1324,7 +1324,7 @@
         "grade": "GⅢ",
         "name": "キーンランドC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1339,7 +1339,7 @@
         "grade": "GⅢ",
         "name": "札幌2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1354,7 +1354,7 @@
         "grade": "GⅢ",
         "name": "新潟記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1369,7 +1369,7 @@
         "grade": "GⅢ",
         "name": "小倉2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1384,7 +1384,7 @@
         "grade": "GⅢ",
         "name": "紫苑S",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -1399,7 +1399,7 @@
         "grade": "GⅢ",
         "name": "京成杯オータムH",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1414,7 +1414,7 @@
         "grade": "GⅡ",
         "name": "セントウルS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1429,7 +1429,7 @@
         "grade": "J・GⅢ",
         "name": "阪神ジャンプS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1444,7 +1444,7 @@
         "grade": "GⅡ",
         "name": "ローズS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -1459,7 +1459,7 @@
         "grade": "GⅡ",
         "name": "セントライト記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -1474,7 +1474,7 @@
         "grade": "GⅡ",
         "name": "オールカマー",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1489,7 +1489,7 @@
         "grade": "GⅡ",
         "name": "神戸新聞杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -1504,7 +1504,7 @@
         "grade": "GⅢ",
         "name": "シリウスS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1519,7 +1519,7 @@
         "grade": "GⅠ",
         "name": "スプリンターズS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1534,7 +1534,7 @@
         "grade": "GⅢ",
         "name": "サウジアラビアロイヤルC",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1549,7 +1549,7 @@
         "grade": "GⅡ",
         "name": "毎日王冠",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1564,7 +1564,7 @@
         "grade": "GⅡ",
         "name": "京都大賞典",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1579,7 +1579,7 @@
         "grade": "GⅡ",
         "name": "府中牝馬S",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": true,
@@ -1594,7 +1594,7 @@
         "grade": "J・GⅡ",
         "name": "東京ハイジャンプ",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1609,7 +1609,7 @@
         "grade": "GⅠ",
         "name": "秋華賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": true,
@@ -1624,7 +1624,7 @@
         "grade": "GⅡ",
         "name": "富士S",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1639,7 +1639,7 @@
         "grade": "GⅠ",
         "name": "菊花賞",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": false
         },
         "femaleOnly": false,
@@ -1654,7 +1654,7 @@
         "grade": "GⅢ",
         "name": "アルテミスS",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": true,
@@ -1669,7 +1669,7 @@
         "grade": "GⅡ",
         "name": "スワンS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1684,7 +1684,7 @@
         "grade": "GⅠ",
         "name": "天皇賞（秋）",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1699,7 +1699,7 @@
         "grade": "GⅡ",
         "name": "京王杯2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1714,7 +1714,7 @@
         "grade": "GⅢ",
         "name": "ファンタジーS",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": true,
@@ -1729,7 +1729,7 @@
         "grade": "GⅡ",
         "name": "アルゼンチン共和国杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1744,7 +1744,7 @@
         "grade": "GⅢ",
         "name": "みやこS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1759,7 +1759,7 @@
         "grade": "GⅢ",
         "name": "武蔵野S",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1774,7 +1774,7 @@
         "grade": "J・GⅢ",
         "name": "京都ジャンプS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1789,7 +1789,7 @@
         "grade": "GⅡ",
         "name": "デイリー杯2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1804,7 +1804,7 @@
         "grade": "GⅠ",
         "name": "エリザベス女王杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": true,
@@ -1819,7 +1819,7 @@
         "grade": "GⅢ",
         "name": "福島記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1834,7 +1834,7 @@
         "grade": "GⅡ",
         "name": "東スポ杯2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1849,7 +1849,7 @@
         "grade": "GⅠ",
         "name": "マイルチャンピオンシップ",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1864,7 +1864,7 @@
         "grade": "GⅢ",
         "name": "京都2歳S",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -1879,7 +1879,7 @@
         "grade": "GⅠ",
         "name": "ジャパンC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1894,7 +1894,7 @@
         "grade": "GⅢ",
         "name": "京阪杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1909,7 +1909,7 @@
         "grade": "GⅡ",
         "name": "ステイヤーズS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1924,7 +1924,7 @@
         "grade": "GⅢ",
         "name": "チャレンジC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1939,7 +1939,7 @@
         "grade": "GⅠ",
         "name": "チャンピオンズC",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1954,7 +1954,7 @@
         "grade": "GⅢ",
         "name": "中日新聞杯",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1969,7 +1969,7 @@
         "grade": "GⅢ",
         "name": "カペラS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -1984,7 +1984,7 @@
         "grade": "GⅠ",
         "name": "阪神ジュベナイルF",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": true,
@@ -1999,7 +1999,7 @@
         "grade": "GⅢ",
         "name": "ターコイズS",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": true,
@@ -2014,7 +2014,7 @@
         "grade": "GⅠ",
         "name": "朝日杯フューチュリティS",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
@@ -2029,7 +2029,7 @@
         "grade": "J・GⅠ",
         "name": "中山大障害",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -2044,7 +2044,7 @@
         "grade": "GⅡ",
         "name": "阪神C",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -2059,7 +2059,7 @@
         "grade": "GⅠ",
         "name": "有馬記念",
         "age": {
-            "age": "3",
+            "age": 3,
             "more": true
         },
         "femaleOnly": false,
@@ -2074,7 +2074,7 @@
         "grade": "GⅠ",
         "name": "ホープフルS",
         "age": {
-            "age": "2",
+            "age": 2,
             "more": false
         },
         "femaleOnly": false,
