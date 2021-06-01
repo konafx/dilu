@@ -73,26 +73,26 @@ const Graph = () => {
     return { distance, date, race };
   });
 
-  console.log(scat);
-
   const formatUtToDate = (tickItem) => {
     return dayjs.unix(tickItem).format('MM/DD');
   };
 
   const ymin = dayjs('2021/01/01').unix();
   const ymax = dayjs('2021/12/31').unix();
+  const xmin = 800;
+  const xmax = 4800;
 
   return (
     <ScatterChart width={1200} height={2400} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis
         dataKey="distance"
-        domain={['dataMin', 'dataMax']}
+        domain={[xmin, xmax]}
         type="number"
         name="距離"
         unit="m"
         orientation="top"
-        interval={0}
+        ticks={[...Array(20)].map((_, i) => 200 * i + xmin).filter((v) => xmin <= v && v < xmax)}
       />
       <YAxis
         dataKey="date"
