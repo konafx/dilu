@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis, Tooltip, Dot, ZAxis } from 'recharts';
+import { ScatterChart, Scatter, CartesianGrid, YAxis, Tooltip, Dot, ZAxis } from 'recharts';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import dayOfYear from 'dayjs/plugin/dayOfYear';
@@ -11,6 +11,7 @@ dayjs.extend(dayOfYear);
 
 import races from './assets/race.json';
 import Race from './components/Race';
+import DistanceAxis from './components/DistanceAxis';
 
 const RaceToolTip = ({ active, payload }) => {
   if (active) {
@@ -80,21 +81,11 @@ const Graph = () => {
 
   const ymin = dayjs('2021/01/01').dayOfYear();
   const ymax = dayjs('2021/12/31').dayOfYear();
-  const xmin = 800;
-  const xmax = 4800;
 
   return (
     <ScatterChart width={1200} height={2400} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis
-        dataKey="distance"
-        domain={[xmin, xmax]}
-        type="number"
-        name="距離"
-        unit="m"
-        orientation="top"
-        ticks={[...Array(20)].map((_, i) => 200 * i + xmin).filter((v) => xmin <= v && v < xmax)}
-      />
+      <DistanceAxis />
       <YAxis
         dataKey="date"
         domain={[ymin, ymax]}
