@@ -2,22 +2,15 @@ import React from 'react';
 import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis, Tooltip, Dot, ZAxis } from 'recharts';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
+import dayOfYear from 'dayjs/plugin/dayOfYear';
+import weekOfYear from 'dayjs/plugin/weekOfYear';
+import { getGradeColorByName } from './util';
+
+dayjs.extend(weekOfYear);
+dayjs.extend(dayOfYear);
 
 import races from './assets/race.json';
 import Race from './components/Race';
-
-const GRADE = {
-  NAME: {
-    G3: 'GⅢ',
-    G2: 'GⅡ',
-    G1: 'GⅠ',
-  },
-  COLOR: {
-    G3: '#268300',
-    G2: '#D71A1A',
-    G1: '#1976D2',
-  },
-};
 
 const RaceToolTip = ({ active, payload }) => {
   if (active) {
@@ -36,16 +29,7 @@ RaceToolTip.propTypes = {
 const RaceDot = (props) => {
   const { cx, cy, race } = props;
 
-  const enumGradeColor = (gradeString) => {
-    for (const [k, v] of Object.entries(GRADE.NAME)) {
-      if (new RegExp(v).test(gradeString)) {
-        return GRADE.COLOR[k];
-      }
-    }
-    return '#989996';
-  };
-
-  const fill = enumGradeColor(race.grade);
+  const fill = getGradeColorByName(race.grade);
 
   return (
     <g>
@@ -67,18 +51,35 @@ RaceDot.propTypes = {
 };
 
 const Graph = () => {
+  const dayMap = new Map();
   const scat = races.map((race) => {
     const distance = race.course.distance;
-    const date = dayjs(race.date).unix();
+
+    const d = dayjs(race.date);
+
+    const _week = d.week();
+    const week = _week > 1 || d.month() == 0 ? _week : d.week(0).week() + 1;
+    {
+      const count = dayMap.get(week);
+      if (count) {
+        dayMap.set(week, count + 1);
+      } else {
+        dayMap.set(week, 1);
+      }
+    }
+
+    const count = dayMap.get(week);
+    const date = (week - 1) * 7 + (count - 1);
+
     return { distance, date, race };
   });
 
   const formatUtToDate = (tickItem) => {
-    return dayjs.unix(tickItem).format('MM/DD');
+    return dayjs('2021/01/01').dayOfYear(tickItem).format('MM/DD');
   };
 
-  const ymin = dayjs('2021/01/01').unix();
-  const ymax = dayjs('2021/12/31').unix();
+  const ymin = dayjs('2021/01/01').dayOfYear();
+  const ymax = dayjs('2021/12/31').dayOfYear();
   const xmin = 800;
   const xmax = 4800;
 

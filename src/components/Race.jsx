@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { getGradeClassByName } from '../util';
+
 const Race = (props) => {
   const { grade, name, age, femaleOnly, course } = props;
+  const gradeClass = getGradeClassByName(grade);
   return (
     <div className="card is-small">
       <div className="card-content">
         <div className="media">
           <div className="media-content">
             <p className="title is-6">
-              {grade} {name}
+              <span className={['tag', gradeClass, 'mr-1'].join(' ')}>{grade}</span>
+              {name}
             </p>
             <p className="subtitle is-6">
               {course.course} {course.distance} <br />
-              {age.age}歳{age.more ? '以上' : ''} {femaleOnly ? '牝' : '牡・牝'}
+              {age.age}歳{age.more ? '以上' : ''} {femaleOnly ? '牝' : '牡・牝'} <br />
             </p>
           </div>
         </div>
