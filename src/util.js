@@ -1,4 +1,5 @@
 export const GRADE = {
+  KEY: ['G1', 'G2', 'G3'],
   NAME: {
     G3: 'GⅢ',
     G2: 'GⅡ',
@@ -10,9 +11,9 @@ export const GRADE = {
     G1: '#1976D2',
   },
   CLASS: {
-    G3: 'is-success',
-    G2: 'is-danger',
-    G1: 'is-info',
+    G3: 'success',
+    G2: 'danger',
+    G1: 'info',
   },
 };
 

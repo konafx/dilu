@@ -12,7 +12,7 @@ const Race = (props) => {
         <div className="media">
           <div className="media-content">
             <p className="title is-6">
-              <span className={['tag', gradeClass, 'mr-1'].join(' ')}>{grade}</span>
+              <span className={['tag', `is-${gradeClass}`, 'mr-1'].join(' ')}>{grade}</span>
               {name}
             </p>
             <p className="subtitle is-6">

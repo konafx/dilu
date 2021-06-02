@@ -1,16 +1,17 @@
 import React from 'react';
 import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis, Tooltip, Dot, ZAxis } from 'recharts';
 import PropTypes from 'prop-types';
+import { useForm } from 'react-hook-form';
+
 import dayjs from 'dayjs';
 import dayOfYear from 'dayjs/plugin/dayOfYear';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
-import { getGradeColorByName } from './util';
+import { GRADE, getGradeColorByName } from './util';
+import races from './assets/race.json';
+import Race from './components/Race';
 
 dayjs.extend(weekOfYear);
 dayjs.extend(dayOfYear);
-
-import races from './assets/race.json';
-import Race from './components/Race';
 
 const RaceToolTip = ({ active, payload }) => {
   if (active) {
@@ -51,6 +52,9 @@ RaceDot.propTypes = {
 };
 
 const Graph = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = console.log;
+
   const dayMap = new Map();
   const scat = races.map((race) => {
     const distance = race.course.distance;
@@ -58,7 +62,7 @@ const Graph = () => {
     const d = dayjs(race.date);
 
     const _week = d.week();
-    const week = _week > 1 || d.month() == 0 ? _week : d.week(0).week() + 1;
+    const week = _week > 1 || d.month() === 0 ? _week : d.week(0).week() + 1;
     {
       const count = dayMap.get(week);
       if (count) {
@@ -84,38 +88,49 @@ const Graph = () => {
   const xmin = 800;
   const xmax = 4800;
   return (
-    <>
-      <div className="field">
-        <label className="checkbox">
-          <input type="checkbox" />
-          Remember me
-        </label>
+    <div className="container">
+      <div className="section">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="field">
+            <span className="control is-grouped">
+              {GRADE.KEY.map((gradeKey) => (
+                <label key={gradeKey} className="checkbox mx-1">
+                  <input type="checkbox" {...register(`grade.${gradeKey}`)} />
+                  <span className={['tag', `is-${GRADE.CLASS[gradeKey]}`, 'mx-1'].join(' ')}>
+                    {GRADE.NAME[gradeKey]}
+                  </span>
+                </label>
+              ))}
+            </span>
+          </div>
+          <input className="button is-primary" type="submit" />
+        </form>
+        <ScatterChart width={1200} height={2400} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis
+            dataKey="distance"
+            domain={[xmin, xmax]}
+            type="number"
+            name="距離"
+            unit="m"
+            orientation="top"
+            ticks={[...Array(20)].map((_, i) => 200 * i + xmin).filter((v) => xmin <= v && v < xmax)}
+          />
+          <YAxis
+            dataKey="date"
+            domain={[ymin, ymax]}
+            type="number"
+            name="日付"
+            reversed
+            tickFormatter={formatUtToDate}
+            tickCount={25}
+          />
+          <ZAxis dataKey="race" />
+          <Tooltip content={<RaceToolTip />} />
+          <Scatter name="race" data={scat} legendType="none" shape={<RaceDot />} />
+        </ScatterChart>
       </div>
-      <ScatterChart width={1200} height={2400} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis
-          dataKey="distance"
-          domain={[xmin, xmax]}
-          type="number"
-          name="距離"
-          unit="m"
-          orientation="top"
-          ticks={[...Array(20)].map((_, i) => 200 * i + xmin).filter((v) => xmin <= v && v < xmax)}
-        />
-        <YAxis
-          dataKey="date"
-          domain={[ymin, ymax]}
-          type="number"
-          name="日付"
-          reversed
-          tickFormatter={formatUtToDate}
-          tickCount={25}
-        />
-        <ZAxis dataKey="race" />
-        <Tooltip content={<RaceToolTip />} />
-        <Scatter name="race" data={scat} legendType="none" shape={<RaceDot />} />
-      </ScatterChart>
-    </>
+    </div>
   );
 };
 
