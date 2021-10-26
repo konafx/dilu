@@ -1,5 +1,4 @@
 import React from 'react';
-import { ScatterChart, Scatter, CartesianGrid, XAxis, YAxis, Tooltip, Dot, ZAxis } from 'recharts';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 
@@ -9,6 +8,7 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import { GRADE, getGradeColorByName } from './util';
 import races from './assets/race.json';
 import Race from './components/Race';
+import ScatterPlot from './components/ScatterPlot';
 
 dayjs.extend(weekOfYear);
 dayjs.extend(dayOfYear);
@@ -105,30 +105,7 @@ const Graph = () => {
           </div>
           <input className="button is-primary" type="submit" />
         </form>
-        <ScatterChart width={1200} height={2400} margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis
-            dataKey="distance"
-            domain={[xmin, xmax]}
-            type="number"
-            name="距離"
-            unit="m"
-            orientation="top"
-            ticks={[...Array(20)].map((_, i) => 200 * i + xmin).filter((v) => xmin <= v && v < xmax)}
-          />
-          <YAxis
-            dataKey="date"
-            domain={[ymin, ymax]}
-            type="number"
-            name="日付"
-            reversed
-            tickFormatter={formatUtToDate}
-            tickCount={25}
-          />
-          <ZAxis dataKey="race" />
-          <Tooltip content={<RaceToolTip />} />
-          <Scatter name="race" data={scat} legendType="none" shape={<RaceDot />} />
-        </ScatterChart>
+        <>
       </div>
     </div>
   );
