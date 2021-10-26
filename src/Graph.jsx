@@ -105,7 +105,6 @@ const Graph = () => {
           </div>
           <input className="button is-primary" type="submit" />
         </form>
-        <>
       </div>
     </div>
   );

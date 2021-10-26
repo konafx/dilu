@@ -1,17 +1,14 @@
 import React, { SVGProps } from 'react';
 
-
 interface ScatterPlotProps {
-    witdh: number;
-    height: number;
+  width: number;
+  height: number;
 }
 
 type Props = Omit<SVGProps<SVGSVGElement>, 'viewBox'> & ScatterPlotProps;
 
-const ScatterPlot: React.FC<Props> = props => {
+const ScatterPlot: React.FC<Props> = (props) => {
+  const { width, height, ...others } = props;
 
-    return (
-        <svg>
-        </svg>
-    );
+  return <svg width={width} height={height} version="1.1"></svg>;
 };
