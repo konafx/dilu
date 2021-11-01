@@ -18,7 +18,12 @@ plugins:
   - react
   - jest
   - '@typescript-eslint'
-rules: {}
+rules:
+  'react/prop-types': 1
+overrides:
+  - files: ['**/*.tsx']
+    rules:
+      'react/prop-types': off
 settings:
   react:
     version: detect
