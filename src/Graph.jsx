@@ -7,49 +7,10 @@ import dayOfYear from 'dayjs/plugin/dayOfYear';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import { GRADE, getGradeColorByName } from './util';
 import races from './assets/race.json';
-import Race from './components/Race';
 import ScatterPlot from './components/ScatterPlot';
 
 dayjs.extend(weekOfYear);
 dayjs.extend(dayOfYear);
-
-const RaceToolTip = ({ active, payload }) => {
-  if (active) {
-    const race = payload[2].value;
-    return <Race {...race} />;
-  }
-
-  return null;
-};
-
-RaceToolTip.propTypes = {
-  active: PropTypes.bool,
-  payload: PropTypes.array,
-};
-
-const RaceDot = (props) => {
-  const { cx, cy, race } = props;
-
-  const fill = getGradeColorByName(race.grade);
-
-  return (
-    <g>
-      <Dot cx={cx} cy={cy} r={5} fill={fill} />
-      <g transform={`translate(${cx},${cy})`}>
-        <text x={10} y={0} dy={4} textAnchor="left">
-          {race.name}
-        </text>
-      </g>
-    </g>
-  );
-};
-
-RaceDot.propTypes = {
-  race: PropTypes.object,
-  cx: PropTypes.number,
-  cy: PropTypes.number,
-  fill: PropTypes.string,
-};
 
 const Graph = () => {
   const { register, handleSubmit } = useForm();
