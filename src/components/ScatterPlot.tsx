@@ -8,12 +8,12 @@ interface ScatterPlotProps {
 
 type Props = Omit<SVGProps<SVGSVGElement>, 'viewBox'> & ScatterPlotProps;
 
-const ScatterPlot: React.FC<Props> = (props) => {
-  const { width, height, children, ...others } = props;
-
+const ScatterPlot: React.FC<Props> = ({ width = 0, height = 30, children, ...others }) => {
   return (
-    <svg width={width} height={height} version="1.1">
+    <svg width={width} height={height} x={20} y={30} version="1.1">
       {children}
     </svg>
   );
 };
+
+export default ScatterPlot;
