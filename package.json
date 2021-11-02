@@ -60,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.10.1",
     "@typescript-eslint/parser": "^5.2.0",
     "@visx/mock-data": "^2.1.2",
     "eslint": "^7.27.0",
