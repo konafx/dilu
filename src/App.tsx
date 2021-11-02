@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import Graph from './pages/Graph';
+import Temperature from './pages/Temperature';
+import Theshold from './pages/ThresholdExample';
+import Example from './pages/DotExample';
 
 import 'bulma/css/bulma.min.css';
 
@@ -18,8 +21,11 @@ const App = () => {
               <Link className="navbar-item" to="/graph">
                 Graph
               </Link>
-              <Link className="navbar-item" to="/users">
-                Users
+              <Link className="navbar-item" to="/threshold">
+                Example (Threshold)
+              </Link>
+              <Link className="navbar-item" to="/dots">
+                Example (Dots)
               </Link>
             </div>
           </div>
@@ -30,8 +36,14 @@ const App = () => {
         <Route path="/graph">
           <Graph />
         </Route>
-        <Route path="/users">
-          <Users />
+        <Route path="/temp">
+          <Temperature width={1000} height={700} />
+        </Route>
+        <Route path="/threshold">
+          <Theshold width={1000} height={700} />
+        </Route>
+        <Route path="/dots">
+          <Example width={1000} height={700} />
         </Route>
         <Route path="/">
           <Home />
