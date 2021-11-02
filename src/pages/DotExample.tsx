@@ -17,6 +17,7 @@ const y = (d: PointsRange) => d[1];
 export type DotsProps = {
   width: number;
   height: number;
+  showControls?: boolean;
 };
 
 let tooltipTimeout: number;
@@ -25,6 +26,7 @@ export default withTooltip<DotsProps, PointsRange>(
   ({
     width,
     height,
+    showControls = true,
     hideTooltip,
     showTooltip,
     tooltipOpen,
@@ -33,6 +35,7 @@ export default withTooltip<DotsProps, PointsRange>(
     tooltipTop,
   }: DotsProps & WithTooltipProvidedProps<PointsRange>) => {
     if (width < 10) return null;
+    const [showVoronoi, setShowVoronoi] = useState(showControls);
     const svgRef = useRef<SVGSVGElement>(null);
     const xScale = useMemo(
       () =>
@@ -92,48 +95,66 @@ export default withTooltip<DotsProps, PointsRange>(
     }, [hideTooltip]);
 
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <svg width={width} height={height} ref={svgRef}>
-              <GradientPinkRed id="dots-pink" />
-              {/** capture all mouse events with a rect */}
-              <rect
-                width={width}
-                height={height}
-                rx={14}
-                fill="url(#dots-pink)"
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
-                onTouchMove={handleMouseMove}
-                onTouchEnd={handleMouseLeave}
+      <div>
+        <svg width={width} height={height} ref={svgRef}>
+          <GradientPinkRed id="dots-pink" />
+          {/** capture all mouse events with a rect */}
+          <rect
+            width={width}
+            height={height}
+            rx={14}
+            fill="url(#dots-pink)"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            onTouchMove={handleMouseMove}
+            onTouchEnd={handleMouseLeave}
+          />
+          <Group pointerEvents="none">
+            {points.map((point, i) => (
+              <Circle
+                key={`point-${point[0]}-${i}`}
+                className="dot"
+                cx={xScale(x(point))}
+                cy={yScale(y(point))}
+                r={i % 3 === 0 ? 2 : 3}
+                fill={tooltipData === point ? 'white' : '#f6c431'}
               />
-              <Group pointerEvents="none">
-                {points.map((point, i) => (
-                  <Circle
-                    key={`point-${point[0]}-${i}`}
-                    className="dot"
-                    cx={xScale(x(point))}
-                    cy={yScale(y(point))}
-                    r={i % 3 === 0 ? 2 : 3}
-                    fill={tooltipData === point ? 'white' : '#f6c431'}
+            ))}
+            {showVoronoi &&
+              voronoiLayout
+                .polygons()
+                .map((polygon, i) => (
+                  <VoronoiPolygon
+                    key={`polygon-${i}`}
+                    polygon={polygon}
+                    fill="white"
+                    stroke="white"
+                    strokeWidth={1}
+                    strokeOpacity={0.2}
+                    fillOpacity={tooltipData === polygon.data ? 0.5 : 0}
                   />
                 ))}
-              </Group>
-            </svg>
-            {tooltipOpen && tooltipData && tooltipLeft != null && tooltipTop != null && (
-              <Tooltip left={tooltipLeft + 10} top={tooltipTop + 10}>
-                <div>
-                  <strong>x:</strong> {x(tooltipData)}
-                </div>
-                <div>
-                  <strong>y:</strong> {y(tooltipData)}
-                </div>
-              </Tooltip>
-            )}
+          </Group>
+        </svg>
+        {tooltipOpen && tooltipData && tooltipLeft != null && tooltipTop != null && (
+          <Tooltip left={tooltipLeft + 10} top={tooltipTop + 10}>
+            <div>
+              <strong>x:</strong> {x(tooltipData)}
+            </div>
+            <div>
+              <strong>y:</strong> {y(tooltipData)}
+            </div>
+          </Tooltip>
+        )}
+        {showControls && (
+          <div>
+            <label style={{ fontSize: 12 }}>
+              <input type="checkbox" checked={showVoronoi} onChange={() => setShowVoronoi(!showVoronoi)} />
+              &nbsp;Show voronoi point map
+            </label>
           </div>
-        </div>
-      </section>
+        )}
+      </div>
     );
   }
 );

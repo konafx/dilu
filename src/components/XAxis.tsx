@@ -9,7 +9,7 @@ interface XAxisProps {
 
 type Props = Omit<SVGProps<SVGElement>, 'scale'> & XAxisProps;
 
-const XAxis: React.FC<Props> = ({ type = 'number', orientation = 'top', width = 0, height = 30, ...others }) => {
+const XAxis: React.FC<Props> = ({ type = 'number', orientation = 'top', width = 100, height = 30, ...others }) => {
   const [x1, y1] = [70, 50];
 
   return (
