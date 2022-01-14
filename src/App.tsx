@@ -5,6 +5,7 @@ import Graph from './pages/Graph';
 import Temperature from './pages/Temperature';
 import Theshold from './pages/ThresholdExample';
 import Example from './pages/DotExample';
+import Races from './pages/Races';
 
 import 'bulma/css/bulma.min.css';
 
@@ -28,6 +29,9 @@ const App = () => {
                 <Link className="navbar-item" to="/temp">
                   Temperature
                 </Link>
+                <Link className="navbar-item" to="/races">
+                  Races
+                </Link>
               </div>
             </div>
           </div>
@@ -46,6 +50,9 @@ const App = () => {
           </Route>
           <Route path="/dots">
             <Example width={1000} height={700} />
+          </Route>
+          <Route path="/races">
+            <Races width={800} height={1000} />
           </Route>
           <Route path="/">
             <Home />

@@ -23,6 +23,7 @@
     "@visx/tooltip": "^2.2.2",
     "@visx/voronoi": "^2.1.2",
     "bulma": "^0.9.3",
+    "d3-time-format": "^4.0.0",
     "dayjs": "^1.10.5",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",

@@ -7,7 +7,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 RUN npm install --silent
 RUN npm install react-scripts -g --silent
 
